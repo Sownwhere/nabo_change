@@ -58,6 +58,7 @@ namespace Plan{
 		if(ini["cpg"]){
 			cpg.unlock();
 			cout<<"cpg start\n";
+			
 		}
 		est.init(dt);
 		cbic.init(dt);

@@ -21,7 +21,7 @@ private:
 	void init();
 	void plan();
 	void dwdate(Nabo::outputStruct &outRef);
-	array<double,NMot> j0,j1,j2;
+	array<double,NMot> j0,j1,j2,j3;
 	double errSum[NMot];
 	double tSit,tWait,tStand;
 	double kp,ki,kd;

@@ -1,0 +1,10 @@
+.vscode/
+build/
+*.bak
+MUJOCO_LOG.TXT
+CMakeFiles/
+*.original
+libnabo.so
+nabo.dll
+zzz.txt
+third_party.zip
