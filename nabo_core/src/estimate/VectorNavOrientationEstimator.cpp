@@ -10,14 +10,14 @@ VectorNavOrientationEstimator::VectorNavOrientationEstimator(StateEstimate &stat
 void VectorNavOrientationEstimator::run(Rbt::imuClass &imu) {
 
     // std::cout << "\033[1;32m VectorNavOrientationEstimator<T>::run() hahaha  \033[0m \n";
-    StateEstimateResult.orientation[0] =
-        imu.orientation.x();
-    StateEstimateResult.orientation[1] =
-        imu.orientation.y();
-    StateEstimateResult.orientation[2] =
-        imu.orientation.z();
-    StateEstimateResult.orientation[3] =
-        imu.orientation.w();
+    StateEstimateResult.orientation[0] = 0;
+        // imu.orientation.x();
+    StateEstimateResult.orientation[1] = 0;
+        // imu.orientation.y();
+    StateEstimateResult.orientation[2] = 0;
+        // imu.orientation.z();
+    StateEstimateResult.orientation[3] = 0;
+        // imu.orientation.w();
     std::cout<<" StateEstimateResult.orientation"<< StateEstimateResult.orientation.transpose()<<endl;
     
 

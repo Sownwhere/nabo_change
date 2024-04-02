@@ -38,15 +38,21 @@ void runCtrl(mjData &d){
 	in.cnt=(int)(d.time/dt);
 	if(floatBaseFlag){
 		mjtNum*q=d.qpos+3;
+		// for(int i = 0; i<4;i++){
+		// 	in.orientation[i] = d.qpos[i];
+		// }
 		in.rpy[0]=atan2(2*(q[0]*q[1]+q[2]*q[3]), 1-2*(q[1]*q[1]+q[2]*q[2]));
 		in.rpy[1]=asin(2*(q[0]*q[2]-q[3]*q[1]));
 		in.rpy[2]=atan2(2*(q[0]*q[3]+q[1]*q[2]), 1-2*(q[2]*q[2]+q[3]*q[3]));
+
 		for(int i=0;i<3;i++){
 			in.gyr[i]=d.qvel[i+3];
 			in.acc[i]=d.qacc[i];
 			in.supP[i]=d.qpos[i];
 			in.supV[i]=d.qvel[i];
 		}
+
+
 		in.supP[2]-=0.04;//ankle到脚底高度0.04，W系
 		For(NMot){
 			in.j[i]=d.qpos[i+7];//当存在浮基，qpos前7个数为【浮动基3d位置+四元数】

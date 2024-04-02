@@ -12,6 +12,7 @@ namespace Rbt{
 class imuClass{
 public:
 	double rpy[3]{};//imu的yaw存在漂移，此处yaw为tgt.rpy[2]
+	// quat4d orientation;
 	double yawAct;//imu的实际yaw，处理init为0
 	vec3d w,acc;
 	mat3d Rxy,Rz,R;//R内包含tgt.rpy[2]

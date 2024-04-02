@@ -31,6 +31,7 @@ struct inputStruct{
 	double cmdVx,cmdVy,cmdWz;
 	double supP[3],supV[3];
 	double rpy[3],gyr[3],acc[3];
+	double orientation[4];
 	double j[NMot],w[NMot],t[NMot];
 };
 struct outputStruct{
